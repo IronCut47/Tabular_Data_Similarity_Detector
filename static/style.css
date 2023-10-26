@@ -1,0 +1,183 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #113946;
+}
+
+.container {
+  position:  relative;
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px;
+  background-color: #FFF2D8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  z-index: 1;
+  
+}
+.containerBg {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  width: 2000px;
+  height: 150px;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 200px;
+  background-color: #EAD7BB;
+  transform: rotate(20deg);
+  z-index: -1;
+  position: fixed;
+}
+.containerBg-1 {
+  margin:-35px;
+  
+  width: 100%;
+  padding: 0px;
+  width: 2000px;
+  height: 450px;
+  background-color: #BCA37F;
+  transform: rotate(20deg);
+  z-index: -3;
+  position: fixed;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+  border-radius: 25px;
+}
+
+.select-container {
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+
+.select-container label {
+  display: block;
+  margin-bottom: 5px;
+  border-radius: 25px;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.calculate-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  border-radius: 25px;
+}
+.Result-btn {
+  display: inline-block;
+  background-color: #fa0000c4;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 25px;
+}
+.calculate-btn:hover {
+  background-color: #45a049;
+  border-radius: 25px;
+}
+
+.file-input {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 25px;
+}
+
+.file-input input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 25px;
+
+}
+
+.file-input label {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  border-radius: 25px;
+}
+
+.file-input label:hover {
+  background-color: #45a049;
+  border-radius: 25px;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 25px;
+}
+
+.error {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: red;
+  border-radius: 25px;
+}
+
+.content-display {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #495057;
+  border-radius: 25px;
+}

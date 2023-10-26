@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  /* background-image: url('/static/RGSPLASH_DESKTOP.jpg');  */
+  background-color: grey;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Center the table */
+.bd-example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 20px;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style table headers */
+th {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+/* Style table cells */
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Style for the sidebar */
+.sidebar {
+  max-height: 97vh; /* Set a fixed height for the sidebar */
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-y: scroll; /* Add vertical scroll when content exceeds the fixed height */
+  transition: 0.5s;
+  padding-top: 40px;
+  color: white;
+  z-index: 1; /* Ensure the sidebar is above other content */
+}
+
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1; /* Change text color to make it visible */
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #818181; /* Change the color on hover for contrast */
+}
+
+/* ... your existing styles ... */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+}
+
+/* Ensure text wrapping */
+.sidebar p {
+  white-space: normal;
+}
+
+
+/* Style for the button to open the sidebar */
+#openBtn {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2; /* Ensure the button is above the sidebar */
+}
+
+/* Style for the content area */
+.content {
+  margin-left: 0; /* Set to 0 to allow overlapping */
+  padding: 20px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Similarity Detection App</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+    <div class="containerBg"></div>
+    <div class="containerBg-1"></div>
+    <div class="container" >
+        <h1>Document Similarity Detection App</h1>
+        <form id="post-form" action="/" method="post" enctype="multipart/form-data">
+            <div class="file-input" class="mb-3">
+                <label for="doc1">Choose a File</label>
+                <input type="file" id="doc1" name="doc1" accept=".pdf ,.docx" onchange="displaySelectedFileName1()">
+                <span id="selectedFileName1">No file selected</span>
+            </div>
+            <div class="file-input">
+                <label for="doc2">Choose a File</label>
+                <input type="file" id="doc2" name="doc2" accept=".pdf ,.docx" onchange="displaySelectedFileName2()">
+                <span id="selectedFileName2">No file selected</span>
+            </div>
+            <button type="submit" class="calculate-btn">Calculate</button>
+        </form>
+    </div>
+   
+    <script>
+        function displaySelectedFileName1() {
+            const fileInput = document.getElementById('doc1');
+            const selectedFileName = document.getElementById('selectedFileName1');
+
+            if (fileInput.files.length > 0) {
+                selectedFileName.textContent = fileInput.files[0].name;
+            } else {
+                selectedFileName.textContent = 'No file selected';
+            }
+        }
+        function displaySelectedFileName2() {
+            const fileInput = document.getElementById('doc2');
+            const selectedFileName = document.getElementById('selectedFileName2');
+
+            if (fileInput.files.length > 0) {
+                selectedFileName.textContent = fileInput.files[0].name;
+            } else {
+                selectedFileName.textContent = 'No file selected';
+            }
+        }
+        function hideContentDivIfEmpty() {
+            const contentDiv = document.querySelector('.content-display');
+
+            if (contentDiv.textContent.trim() === '') {
+                contentDiv.style.display = 'none';
+            } else {
+                contentDiv.style.display = 'block';
+            }
+        }
+        hideContentDivIfEmpty();
+    </script>
+</body>
+</html>

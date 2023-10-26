@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style2.css')}}">
+    <title>Testing</title>
+</head>
+<body>
+    <!-- The sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <h2>Similarity Techniques</h2>
+        <ul>
+            <li>
+                <a href="#technique1">Cosine Similarity</a>
+                <p>Cosine Similarity is a widely used technique for measuring the similarity between two documents or vectors in a high-dimensional space. It calculates the cosine of the angle between the vectors, providing a score between -1 and 1. A score of 1 indicates that the documents are identical, 0 means no similarity, and -1 means they are dissimilar. Cosine Similarity is especially useful for text analysis and information retrieval tasks.</p>
+            </li>
+            <li>
+                <a href="#technique2">Longest Common Subsequence</a>
+                <p>The Longest Common Subsequence (LCS) algorithm is employed to find the longest subsequence that two sequences have in common. It is widely used in fields such as genetics and natural language processing to identify shared patterns and structures between sequences. LCS helps determine the similarity between two sequences based on the length of the common elements.</p>
+            </li>
+            <li>
+                <a href="#technique2">Smith Waterman</a>
+                <p>The Smith-Waterman algorithm is a local sequence alignment technique used for comparing two sequences, typically in the context of biological sequence analysis. It identifies the best local alignment by finding the optimal path through a similarity matrix. This algorithm is highly sensitive to small, local similarities, making it ideal for identifying regions of similarity within longer sequences..</p>
+            </li>
+            <li>
+                <a href="#technique2">Needleman-Wunsch</a>
+                <p>The Needleman-Wunsch algorithm is a global sequence alignment method that aligns two sequences based on the identification of the best overall alignment. It assigns scores to matches, mismatches, and gaps, enabling the identification of the most similar sections of two sequences. This algorithm is particularly useful in bioinformatics and string comparison tasks.</p>
+            </li>
+            <li>
+                <a href="#technique2">Bert Similarity</a>
+                <p>Bert Similarity, based on BERT (Bidirectional Encoder Representations from Transformers), is a state-of-the-art natural language processing model. It converts documents into fixed-sized vectors and calculates their similarity using cosine similarity. BERT captures complex contextual relationships in text, making it highly effective for tasks such as document retrieval, question answering, and text classification.</p>
+            </li>
+            <!-- Add more techniques as needed -->
+        </ul>
+    </div>
+
+    <!-- Button to open the sidebar -->
+    <div id="openBtn" onclick="openSidebar()">&#9776;</div>
+
+    <!-- Main content area -->
+    <div class="content">
+        <div class="bd-example">
+            <table border="1">
+                <tr>
+                    <th>Technique</th>
+                    <th>Score</th>
+                </tr>
+                {% for technique, score in scores.items() %}
+                <tr>
+                    <td>{{ technique }}</td>
+                    <td>{{ score }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "700px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>

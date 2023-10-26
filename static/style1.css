@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.file.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin: 20px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center; /* Center the text within the label */
+}
+
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the text within the input */
+}
+
+button.calculate {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px; /* Add this line to make the corners rounded */
+}
+
+button.calculate:hover {
+    background-color: #2980b9;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.result {
+    color: green;
+    font-weight: bold;
+}
+
+.content-display {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    display: none;
+}
